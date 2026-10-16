@@ -1,0 +1,32 @@
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap"
+			rel="stylesheet"
+		/>
+<script>
+	// Dev-only: keep animations running when the embedded/hidden browser pane
+	// suppresses requestAnimationFrame (falls back to a 30fps timer).
+	(function () {
+		var nativeRaf = window.requestAnimationFrame.bind(window);
+		var nativeCancel = window.cancelAnimationFrame.bind(window);
+		window.requestAnimationFrame = function (cb) {
+			var done = false;
+			var timer = setTimeout(function () {
+				if (!done) {
+					done = true;
+					cb(performance.now());
+				}
+			}, 33);
+			var rafId = nativeRaf(function (t) {
+				if (!done) {
+					done = true;
+					clearTimeout(timer);
+					cb(t);
+				}
+			});
+			return rafId;
+		};
+		window.cancelAnimationFrame = nativeCancel;
+	})();
+</script>
