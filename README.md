@@ -133,6 +133,24 @@ format checks. Adjust `num_sim_args` and `run_conditions` in that file to run
 only part of it. Output lands in `games/el_colombiano/library/`, with the
 upload-ready files in `library/publish_files/`.
 
+The outputs that pin the tuned 96.70% RTP are committed, so you can inspect or
+ship the current model without re-running the simulation:
+
+| Path | Versioned | Why |
+|---|---|---|
+| `library/lookup_tables/` | Yes | The tuned payout weights |
+| `library/books/` | Yes | Raw simulation books |
+| `library/configs/` | Yes | Math, event and frontend configs |
+| `library/statistics_summary.json`, `stats_summary.json` | Yes | RTP, hit rate, variance |
+| `library/optimization_files/` | No | Optimiser intermediates (43 MB), regenerable |
+| `library/forces/` | No | Force/debug records |
+| `library/publish_files/` | No | Byte-identical to `upload/math/` |
+
+These exemptions are negation rules at the end of `math-sdk/.gitignore`; other
+games under `math-sdk/games/` keep the upstream behaviour of ignoring
+`library/` entirely. Note that re-running `run.py` regenerates all of it — check
+`git diff` on the lookup tables afterwards to see whether the RTP tuning moved.
+
 ### Frontend
 
 Requires Node ≥ 22.16 and pnpm 10.5.

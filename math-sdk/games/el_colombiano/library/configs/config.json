@@ -1,0 +1,68 @@
+{
+    "workingName": "El Colombiano",
+    "frontendConfig": {
+        "file": "fe_config.json",
+        "sha256": "b9cabe2365a7ec9db0f869b71273cc2e452a898a752ba256a8ca97a33a4f54e2"
+    },
+    "gameID": "el_colombiano",
+    "rtp": 96.7,
+    "betDenomination": 1000,
+    "minDenomination": 10,
+    "providerNumber": 0,
+    "standardForceFile": {
+        "file": "force.json",
+        "sha256": "9b25be352110db81a8335a9d1b6a8e31a9a371df832106b5b64f6a1235276964"
+    },
+    "bookShelfConfig": [
+        {
+            "name": "base",
+            "tables": [
+                {
+                    "file": "lookUpTable_base_0.csv",
+                    "sha256": "0ef40607779a81143296a9e2628eb5e6ff1cd56c4a878d6987c0b6cfb0ca6768"
+                }
+            ],
+            "cost": 1.0,
+            "rtp": 0.967,
+            "std": 8.2,
+            "bookLength": 100000,
+            "feature": true,
+            "autoEndRoundDisabled": false,
+            "buyBonus": false,
+            "maxWin": 5000,
+            "booksFile": {
+                "file": "books_base.jsonl.zst",
+                "sha256": "3609ae2349ff087edb81d5ee274e8a60d8cf562147e1a86e8e666f29bb4d4169"
+            },
+            "forceFile": {
+                "file": "force_record_base.json",
+                "sha256": "59b8efe675413522b9d4e92affb0f2711ea8743b4ac8fa597cbec5570fffc57d"
+            }
+        },
+        {
+            "name": "bonus",
+            "tables": [
+                {
+                    "file": "lookUpTable_bonus_0.csv",
+                    "sha256": "005c88258e6a268c9650d15e619c2fe8012fa0b3ddc157043df485a1a9e4bf60"
+                }
+            ],
+            "cost": 100.0,
+            "rtp": 0.967,
+            "std": 1.05,
+            "bookLength": 100000,
+            "feature": false,
+            "autoEndRoundDisabled": false,
+            "buyBonus": true,
+            "maxWin": 5000,
+            "booksFile": {
+                "file": "books_bonus.jsonl.zst",
+                "sha256": "d8f2aee35dc77643cb4e2e3c538063f7eb896ccfa129d7de3d9e6f23bd111742"
+            },
+            "forceFile": {
+                "file": "force_record_bonus.json",
+                "sha256": "7aecb8334bf9f5ad2a08652de2740dee5eeec5272b96208798f2438f75cb40a1"
+            }
+        }
+    ]
+}

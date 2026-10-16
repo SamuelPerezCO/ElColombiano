@@ -1,0 +1,195 @@
+{
+    "reveal": {
+        "type": "reveal",
+        "board": [
+            [
+                {
+                    "name": "H4"
+                },
+                {
+                    "name": "S",
+                    "scatter": true
+                },
+                {
+                    "name": "L5"
+                },
+                {
+                    "name": "L4"
+                },
+                {
+                    "name": "H3"
+                }
+            ],
+            [
+                {
+                    "name": "L5"
+                },
+                {
+                    "name": "L2"
+                },
+                {
+                    "name": "H4"
+                },
+                {
+                    "name": "S",
+                    "scatter": true
+                },
+                {
+                    "name": "L5"
+                }
+            ],
+            [
+                {
+                    "name": "L5"
+                },
+                {
+                    "name": "L4"
+                },
+                {
+                    "name": "L3"
+                },
+                {
+                    "name": "S",
+                    "scatter": true
+                },
+                {
+                    "name": "L4"
+                }
+            ],
+            [
+                {
+                    "name": "L1"
+                },
+                {
+                    "name": "L2"
+                },
+                {
+                    "name": "H3"
+                },
+                {
+                    "name": "L1"
+                },
+                {
+                    "name": "L5"
+                }
+            ],
+            [
+                {
+                    "name": "L2"
+                },
+                {
+                    "name": "H1"
+                },
+                {
+                    "name": "S",
+                    "scatter": true
+                },
+                {
+                    "name": "H3"
+                },
+                {
+                    "name": "L3"
+                }
+            ]
+        ],
+        "paddingPositions": [
+            72,
+            7,
+            7,
+            193,
+            37
+        ],
+        "gameType": "basegame",
+        "anticipation": [
+            0,
+            0,
+            1,
+            2,
+            3
+        ]
+    },
+    "setTotalWin": {
+        "type": "setTotalWin",
+        "amount": 0
+    },
+    "guaroBonusTrigger": {
+        "type": "guaroBonusTrigger",
+        "totalPicks": 4,
+        "positions": [
+            {
+                "reel": 0,
+                "row": 1
+            },
+            {
+                "reel": 1,
+                "row": 3
+            },
+            {
+                "reel": 2,
+                "row": 3
+            },
+            {
+                "reel": 4,
+                "row": 2
+            }
+        ]
+    },
+    "guaroPickReveal": {
+        "type": "guaroPickReveal",
+        "pick": 1,
+        "totalPicks": 4,
+        "prize": 3333,
+        "runningTotal": 3333,
+        "isGuaro": false
+    },
+    "guaroBonusEnd": {
+        "type": "guaroBonusEnd",
+        "amount": 20000,
+        "winLevel": 7
+    },
+    "finalWin": {
+        "type": "finalWin",
+        "amount": 20000
+    },
+    "winInfo": {
+        "type": "winInfo",
+        "totalWin": 10,
+        "wins": [
+            {
+                "symbol": "L5",
+                "kind": 3,
+                "win": 10,
+                "positions": [
+                    {
+                        "reel": 0,
+                        "row": 3
+                    },
+                    {
+                        "reel": 1,
+                        "row": 2
+                    },
+                    {
+                        "reel": 2,
+                        "row": 1
+                    }
+                ],
+                "meta": {
+                    "lineIndex": 5,
+                    "multiplier": 1,
+                    "winWithoutMult": 10,
+                    "globalMult": 1,
+                    "lineMultiplier": 1
+                }
+            }
+        ]
+    },
+    "setWin": {
+        "type": "setWin",
+        "amount": 10,
+        "winLevel": 2
+    },
+    "wincap": {
+        "type": "wincap",
+        "amount": 500000
+    }
+}

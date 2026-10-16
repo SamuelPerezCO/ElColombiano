@@ -27,3 +27,19 @@ __pycache__
 
 **/site/*
 
+
+# --- El Colombiano: version the tuned math outputs ---
+# The upstream rules above exclude every games/*/library/ artifact. For
+# el_colombiano we keep the outputs needed to reproduce the tuned 96.70% RTP
+# without re-running the simulation. Still excluded: optimization_files/
+# (optimizer intermediates), forces/ (force records), and publish_files/
+# (byte-identical to upload/math/).
+!games/el_colombiano/library/
+!games/el_colombiano/library/*.json
+!games/el_colombiano/library/*.xlsx
+!games/el_colombiano/library/lookup_tables/
+!games/el_colombiano/library/lookup_tables/**
+!games/el_colombiano/library/books/
+!games/el_colombiano/library/books/**
+!games/el_colombiano/library/configs/
+!games/el_colombiano/library/configs/**
